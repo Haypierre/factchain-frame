@@ -248,7 +248,7 @@ const FACTCHAIN_ABI = [
 ] as const;
 
 app.get('/manifest', (c) => {
-  return c.redirect('https://factchain.tech')
+  return c.redirect('https://factchain.world')
 })
 
 const getParentCastUrl = async (hash: string) => {
@@ -291,7 +291,7 @@ const getParentCastUrl = async (hash: string) => {
 
 const getNotes = async (castUrl: string): Promise<Note[]> => {
   const response = await fetch(
-    `https://api.factchain.tech/notes?postUrl=${encodeURIComponent(castUrl)}`, {
+    `https://api.factchain.world/notes?postUrl=${encodeURIComponent(castUrl)}`, {
       headers: {
         'Content-Type': 'application/json',
         'network': 'BASE_MAINNET',
